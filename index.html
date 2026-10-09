@@ -3243,28 +3243,15 @@
               addLabel(layer, i);
               i++;
         });
-        var i = 0;
-        layer_ANDHRAPRADESH_ASSEMBLY_2.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['fid'] !== null?String('<div style="color: #323232; font-size: 6pt; font-family: \'Mongolian Baiti\', sans-serif;">' + layer.feature.properties['fid']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_ANDHRAPRADESH_ASSEMBLY_2'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        resetLabels([layer_INDIA_STATES_1,layer_ANDHRAPRADESH_ASSEMBLY_2]);
+        resetLabels([layer_INDIA_STATES_1]);
         map.on("zoomend", function(){
-            resetLabels([layer_INDIA_STATES_1,layer_ANDHRAPRADESH_ASSEMBLY_2]);
+            resetLabels([layer_INDIA_STATES_1]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_INDIA_STATES_1,layer_ANDHRAPRADESH_ASSEMBLY_2]);
+            resetLabels([layer_INDIA_STATES_1]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_INDIA_STATES_1,layer_ANDHRAPRADESH_ASSEMBLY_2]);
+            resetLabels([layer_INDIA_STATES_1]);
         });
         </script>        
     </body>
